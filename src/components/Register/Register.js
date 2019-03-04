@@ -26,9 +26,9 @@ class Register extends React.Component {
     onSubmitSignIn = () => {
         fetch('https://git.heroku.com/desolate-inlet-25995.git/register', {
             method: 'post',
-            "Access-Control-Allow-Credentials": true,
-            "Access-Control-Allow-Origin": "*",
-            headers: {'Content-Type': 'application/json'},
+            headers: {  "Access-Control-Allow-Credentials": true,
+                        "Access-Control-Allow-Origin": "*",
+                        'Content-Type': 'application/json'},
             body: JSON.stringify({
                 email: this.state.email,
                 password: this.state.password,
