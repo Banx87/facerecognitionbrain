@@ -86,7 +86,7 @@ class App extends Component {
 
     onPictureSubmit = () => {
         this.setState({imageUrl: this.state.input});
-               fetch('https://thawing-shore-93064.herokuapp.com/imageurl', {
+               fetch('https://git.heroku.com/desolate-inlet-25995.git/imageurl', {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -96,7 +96,7 @@ class App extends Component {
                 .then(response => response.json())
                 .then(response => {
                     if(response) {
-                        fetch('https://thawing-shore-93064.herokuapp.com/:3000/image', {
+                        fetch('https://git.heroku.com/desolate-inlet-25995.git/:3000/image', {
                             method: 'put',
                             headers: {'Content-Type': 'application/json'},
                             body: JSON.stringify({
